@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuôi Tôi - Minh Bạch 100% (Thật Đấy!)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .slogan {
+            font-size: 1.3em;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-top: 15px;
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .slogan strong {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #f5576c;
+            padding-left: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .qr-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .qr-code {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .qr-code img {
+            width: 300px;
+            height: 300px;
+            display: block;
+        }
+
+        .funny-notes {
+            background: #fff9e6;
+            border-left: 5px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .funny-notes h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .funny-notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .funny-notes li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .funny-notes li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .disclaimer {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .slogan {
+                font-size: 1.1em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .qr-code img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Nuôi Tôi Logo">
+            </div>
+            <h1>🌱 NUÔI TÔI 🌱</h1>
+            <div class="slogan">
+                "Hãy nuôi em có trách nhiệm,<br>
+                còn không thì <strong>HÃY NUÔI TÔI</strong>.<br>
+                Tôi hứa sao kê đầy đủ!" 💯
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>🎯 Tại Sao Nên Nuôi Tôi?</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Sao Kê Realtime</h3>
+                        <p>Cập nhật từng giây! Còn nhanh hơn cả tốc độ bạn chuyển tiền!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Minh Bạch 300%</h3>
+                        <p>Hơn cả 100%! Tôi còn báo cáo cả việc mua ly trà sữa!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💸</div>
+                        <h3>Chi Tiêu Hợp Lý</h3>
+                        <p>Không mua xe hơi, nhà cửa. Chỉ ăn cơm với mì tôm thôi!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>App Tracking</h3>
+                        <p>Theo dõi 24/7 tôi ăn gì, uống gì, đi đâu. Như "Big Brother" vậy!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funny-notes">
+                <h3>🎪 Cam Kết Vàng Của Tôi:</h3>
+                <ul>
+                    <li><strong>Sao kê mỗi ngày:</strong> Cập nhật lúc 6h sáng, đều như vắt chanh! (Kể cả Chủ Nhật & Lễ)</li>
+                    <li><strong>Không giấu giếm:</strong> Từ tô phở 50k đến hộp sữa chua 8k đều được ghi chép tỉ mỉ!</li>
+                    <li><strong>Có hóa đơn chứng từ:</strong> Chụp hình bill, quét mã vạch, lưu biên lai đầy đủ!</li>
+                    <li><strong>Video unboxing:</strong> Mở từng gói mì tôm live trên Facebook cho anh chị xem!</li>
+                    <li><strong>Hotline 24/7:</strong> Gọi hỏi tôi ăn gì bất cứ lúc nào, kể cả 3h sáng!</li>
+                    <li><strong>Khôngblock:</strong> Hỏi khó đến mấy cũng trả lời, không "đã xem" rồi im lặng!</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>💰 So Sánh Với "Người Khác"</h2>
+                <div class="funny-notes" style="background: #ffe6e6; border-left-color: #ff4757;">
+                    <h3 style="color: #ff4757;">❌ Người Khác:</h3>
+                    <ul>
+                        <li style="color: #e74c3c;">Sao kê sau 3 năm (hoặc không bao giờ)</li>
+                        <li style="color: #e74c3c;">File Excel blur mờ như ảnh ma</li>
+                        <li style="color: #e74c3c;">Số liệu "làm tròn" theo kiểu 1 + 1 = 3</li>
+                        <li style="color: #e74c3c;">Block người hỏi nhanh như chớp</li>
+                    </ul>
+                </div>
+                <div class="funny-notes" style="background: #e6ffe6; border-left-color: #4CAF50; margin-top: 15px;">
+                    <h3 style="color: #4CAF50;">✅ Nuôi Tôi:</h3>
+                    <ul>
+                        <li style="color: #27ae60;">Sao kê trước khi tiêu (để anh chị duyệt)</li>
+                        <li style="color: #27ae60;">File Excel 4K Ultra HD, có chữ ký điện tử</li>
+                        <li style="color: #27ae60;">Số liệu chính xác đến từng đồng</li>
+                        <li style="color: #27ae60;">Trả lời inbox nhanh hơn cả chatbot</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <h2 style="color: #c0392b; margin-bottom: 10px;">💳 DONATE NGAY ĐI!</h2>
+                <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;">
+                    Quét mã QR này để nuôi tôi (và nhận bản sao kê ngay lập tức!)
+                </p>
+                <div class="qr-code">
+                    <img src="qr-code.png" alt="QR Code Donation">
+                </div>
+                <p style="font-size: 1.1em; color: #e74c3c; font-weight: bold;" class="pulse">
+                    ⚡ Chuyển xong là có mail tự động! ⚡
+                </p>
+                <button class="cta-button" onclick="alert('Cảm ơn bạn đã quan tâm! Hãy quét mã QR để donate nhé! 🙏')">
+                    🎁 TÔI MUỐN NUÔI BẠN!
+                </button>
+            </div>
+
+            <div class="section">
+                <h2>📈 Tôi Sẽ Dùng Tiền Vào Đâu?</h2>
+                <div class="funny-notes" style="background: #f0f8ff; border-left-color: #3498db;">
+                    <ul>
+                        <li><strong>40%</strong> - Ăn uống (Cơm, mì tôm, trứng, rau. KHÔNG có tôm hùm!)</li>
+                        <li><strong>20%</strong> - Điện nước internet (Để sao kê cho anh chị)</li>
+                        <li><strong>15%</strong> - Thuê nhà (Phòng trọ 15m², không phải penthouse)</li>
+                        <li><strong>10%</strong> - Y tế (Thuốc cảm, vitamin C, khẩu trang)</li>
+                        <li><strong>10%</strong> - Học tập nâng cao (Sách, khóa học online để sao kê tốt hơn)</li>
+                        <li><strong>5%</strong> - Giải trí (Netflix? Không! Chỉ Youtube miễn phí thôi!)</li>
+                    </ul>
+                </div>
+                <p style="text-align: center; margin-top: 20px; font-weight: bold; color: #e74c3c; font-size: 1.1em;">
+                    📊 Biểu đồ chi tiết cập nhật hàng tuần trên website!
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🎤 Lời Nhắn Từ Trái Tim</h2>
+                <div class="funny-notes" style="background: #fff0f5; border-left-color: #ff69b4;">
+                    <p style="font-size: 1.1em; line-height: 1.8; color: #555;">
+                        Trong thời đại mà <strong>"từ thiện"</strong> đã trở thành từ nhạy cảm, 
+                        <strong>"sao kê"</strong> trở thành trào lưu hot trend, và 
+                        <strong>"minh bạch"</strong> là thứ xa xỉ hơn cả kim cương... 
+                        <br><br>
+                        Tôi xin khẳng định: <strong style="color: #e74c3c;">HÃY NUÔI TÔI!</strong>
+                        <br><br>
+                        Tôi nghèo, tôi cần tiền, nhưng tôi KHÔNG MẤT LƯƠNG TÂM! 
+                        Mỗi đồng tiền các bạn gửi, tôi sẽ chi tiêu rõ ràng, 
+                        minh bạch như bụng đói của tôi vậy! 😭
+                        <br><br>
+                        <em>P/S: Tôi hứa sẽ không mua xe hơi bằng tiền donate. 
+                        Vì... tôi chưa có bằng lái! 🚗❌</em>
+                    </p>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>
+                    <strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC & CHÂM BIẾM</strong> 
+                    về vấn đề minh bạch trong hoạt động từ thiện tại Việt Nam. 
+                    Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào.
+                    <br><br>
+                    Nếu bạn muốn làm từ thiện thật sự, hãy tìm các tổ chức uy tín, 
+                    có báo cáo minh bạch và được kiểm toán độc lập! 💚
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Thêm hiệu ứng khi scroll
+        window.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if(cardPosition < screenPosition) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Khởi tạo animation cho cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+        });
+    </script>
+</body>
+</html>
