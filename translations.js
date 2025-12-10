@@ -48,7 +48,7 @@ const translations = {
         budget6: "<strong>5%</strong> - Giải trí (Netflix? Không! Chỉ Youtube miễn phí thôi!)",
         budgetChart: "📊 Biểu đồ chi tiết cập nhật hàng tuần trên website!",
         messageTitle: "🎤 Lời Nhắn Từ Trái Tim",
-        message: "Trong thời đại mà <strong>\"từ thiện\"</strong> đã trở thành từ nhạy cảm, <strong>\"sao kê\"</strong> trở thành trào lưu hot trend, và <strong>\"minh bạch\"</strong> là thứ xa xỉ hơn cả kim cương...<br><br>Tôi xin khẳng định: <strong style=\"color: #e74c3c;\">HÃY NUÔI TÔI!</strong><br><br>Tôi nghèo, tôi cần tiền, nhưng tôi KHÔNG MẤT LƯƠNG TÂM! Mỗi đồng tiền các bạn gửi, tôi sẽ chi tiêu rõ ràng, minh bạch như bụng đói của tôi vậy! 😭<br><br><em>P/S: Tôi hứa sẽ không mua xe hơi bằng tiền donate. Vì... tôi chưa có bằng lái! 🚗❌</em>",
+        message: "Trong thời đại mà <strong>\"từ thiện\"</strong> đã trở thành từ nhạy cảm, Tôi xin khẳng định: <strong style=\"color: #e74c3c;\">HÃY NUÔI TÔI!</strong><br><br>Tôi nghèo, tôi cần tiền, nhưng tôi KHÔNG MẤT LƯƠNG TÂM! Mỗi đồng tiền các bạn gửi, tôi sẽ chi tiêu rõ ràng, minh bạch như bụng đói của tôi vậy! 😭<br><br><em>P/S: Tôi hứa sẽ không mua xe hơi bằng tiền donate. Vì... tôi chưa có bằng lái! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC</strong> Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào."
     },
     en: {
@@ -100,7 +100,7 @@ const translations = {
         budget6: "<strong>5%</strong> - Entertainment (Netflix? No! Only free YouTube!)",
         budgetChart: "📊 Detailed charts updated weekly on website!",
         messageTitle: "🎤 Message From The Heart",
-        message: "In an era where <strong>\"charity\"</strong> has become a sensitive word, <strong>\"statements\"</strong> became trending, and <strong>\"transparency\"</strong> is more luxurious than diamonds...<br><br>I declare: <strong style=\"color: #e74c3c;\">FEED ME!</strong><br><br>I'm poor, I need money, but I DON'T LACK CONSCIENCE! Every dollar you send, I'll spend clearly, transparent as my hunger! 😭<br><br><em>P/S: I promise not to buy cars with donations. Because... I don't have a license! 🚗❌</em>",
+        message: "In an era where <strong>\"charity\"</strong> has become a sensitive word, I declare: <strong style=\"color: #e74c3c;\">FEED ME!</strong><br><br>I'm poor, I need money, but I WON'T LOSE MY CONSCIENCE! Every dollar you send, I'll spend clearly, transparent as my empty stomach! 😭<br><br><em>P/S: I promise not to buy a car with donation money. Because... I don't have a license! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> This is a <strong>HUMOROUS</strong> website. All content is for entertainment purposes, not intended to offend or criticize any individual/organization."
     },
     fr: {
@@ -152,7 +152,7 @@ const translations = {
         budget6: "<strong>5%</strong> - Divertissement (Netflix? Non! Seulement YouTube gratuit!)",
         budgetChart: "📊 Graphiques détaillés mis à jour chaque semaine sur le site!",
         messageTitle: "🎤 Message du Cœur",
-        message: "À une époque où <strong>\"charité\"</strong> est devenu un mot sensible, <strong>\"relevés\"</strong> sont devenus tendance, et <strong>\"transparence\"</strong> est plus luxueux que les diamants...<br><br>Je déclare: <strong style=\"color: #e74c3c;\">NOURRISSEZ-MOI!</strong><br><br>Je suis pauvre, j'ai besoin d'argent, mais je N'AI PAS DE CONSCIENCE! Chaque euro que vous envoyez, je le dépenserai clairement, transparent comme ma faim! 😭<br><br><em>P/S: Je promets de ne pas acheter de voitures avec les dons. Parce que... je n'ai pas de permis! 🚗❌</em>",
+        message: "À une époque où <strong>\"charité\"</strong> est devenu un mot sensible, Je déclare: <strong style=\"color: #e74c3c;\">NOURRISSEZ-MOI!</strong><br><br>Je suis pauvre, j'ai besoin d'argent, mais je NE PERDRAI PAS MA CONSCIENCE! Chaque euro que vous envoyez, je le dépenserai clairement, transparent comme mon estomac vide! 😭<br><br><em>P/S: Je promets de ne pas acheter une voiture avec l'argent des dons. Parce que... je n'ai pas de permis! 🚗❌</em>",
         disclaimer: "<strong>⚠️ AVERTISSEMENT:</strong> Ceci est un site web <strong>HUMORISTIQUE</strong>. Tout le contenu est à des fins de divertissement, sans intention d'offenser ou de critiquer une personne/organisation."
     },
     da: {
@@ -204,7 +204,7 @@ const translations = {
         budget6: "<strong>5%</strong> - Underholdning (Netflix? Nej! Kun gratis YouTube!)",
         budgetChart: "📊 Detaljerede diagrammer opdateret ugentligt på hjemmesiden!",
         messageTitle: "🎤 Besked Fra Hjertet",
-        message: "I en æra hvor <strong>\"velgørenhed\"</strong> er blevet et følsomt ord, <strong>\"kontoudtog\"</strong> er blevet trending, og <strong>\"gennemsigtighed\"</strong> er mere luksuriøst end diamanter...<br><br>Jeg erklærer: <strong style=\"color: #e74c3c;\">FODRE MIG!</strong><br><br>Jeg er fattig, jeg har brug for penge, men jeg MANGLER IKKE SAMVITTIGHED! Hver krone du sender, bruger jeg klart, gennemsigtig som min sult! 😭<br><br><em>P/S: Jeg lover ikke at købe biler med donationer. Fordi... jeg har ikke kørekort! 🚗❌</em>",
+        message: "I en æra hvor <strong>\"velgørenhed\"</strong> er blevet et følsomt ord, Jeg erklærer: <strong style=\"color: #e74c3c;\">FODRE MIG!</strong><br><br>Jeg er fattig, jeg har brug for penge, men jeg MISTER IKKE MIN SAMVITTIGHED! Hver krone du sender, bruger jeg klart, gennemsigtig som min tomme mave! 😭<br><br><em>P/S: Jeg lover ikke at købe en bil for donationspenge. Fordi... jeg har ikke kørekort! 🚗❌</em>",
         disclaimer: "<strong>⚠️ ANSVARSFRASKRIVELSE:</strong> Dette er en <strong>HUMORISTISK</strong> hjemmeside. Alt indhold er til underholdningsformål, ikke beregnet til at fornærme eller kritisere nogen person/organisation."
     },
     ja: {
@@ -256,7 +256,7 @@ const translations = {
         budget6: "<strong>5%</strong> - エンターテインメント（Netflix？いいえ！無料のYouTubeのみ！）",
         budgetChart: "📊 詳細なチャートは毎週ウェブサイトで更新！",
         messageTitle: "🎤 心からのメッセージ",
-        message: "<strong>「慈善」</strong>が敏感な言葉になり、<strong>「明細」</strong>がトレンドになり、<strong>「透明性」</strong>がダイヤモンドよりも贅沢な時代に...<br><br>私は宣言します：<strong style=\"color: #e74c3c;\">私を養って！</strong><br><br>私は貧しく、お金が必要ですが、良心は失っていません！あなたが送ってくれるすべてのお金を明確に使い、私の空腹のように透明にします！😭<br><br><em>P/S：寄付で車を買わないことを約束します。なぜなら...免許がないから！🚗❌</em>",
+        message: "<strong>「慈善」</strong>が敏感な言葉になった時代に、私は宣言します：<strong style=\"color: #e74c3c;\">私を養って！</strong><br><br>私は貧しく、お金が必要ですが、良心を失いません！あなたが送ってくれたお金は、空腹のお腹のように透明に使います！😭<br><br><em>P/S：寄付金で車を買わないことを約束します。なぜなら...免許がないから！🚗❌</em>",
         disclaimer: "<strong>⚠️ 免責事項：</strong>これは<strong>ユーモラスな</strong>ウェブサイトです。すべてのコンテンツは娯楽目的であり、個人や組織を侮辱または批判する意図はありません。"
     },
     zh: {
@@ -308,7 +308,7 @@ const translations = {
         budget6: "<strong>5%</strong> - 娱乐（Netflix？不！只有免费的YouTube！）",
         budgetChart: "📊 详细图表每周在网站上更新！",
         messageTitle: "🎤 发自内心的话",
-        message: "在<strong>「慈善」</strong>成为敏感词，<strong>「对账单」</strong>成为热门趋势，<strong>「透明」</strong>比钻石更奢侈的时代...<br><br>我宣布：<strong style=\"color: #e74c3c;\">请养我！</strong><br><br>我很穷，我需要钱，但我不会失去良心！你们捐的每一分钱，我都会清楚地花掉，像我空空的肚子一样透明！😭<br><br><em>附言：我保证不会用捐款买车。因为...我没有驾照！🚗❌</em>",
+        message: "在<strong>「慈善」</strong>成为敏感词的时代，我宣布：<strong style=\"color: #e74c3c;\">请养我！</strong><br><br>我很穷，我需要钱，但我不会失去良心！你们捐的每一分钱，我都会清楚地花掉，像我空空的肚子一样透明！😭<br><br><em>附言：我保证不会用捐款买车。因为...我没有驾照！🚗❌</em>",
         disclaimer: "<strong>⚠️ 免责声明：</strong>这是一个<strong>幽默</strong>网站。所有内容仅供娱乐，无意冒犯或批评任何个人/组织。"
     },
     ru: {
@@ -360,7 +360,7 @@ const translations = {
         budget6: "<strong>5%</strong> - Развлечения (Netflix? Нет! Только бесплатный YouTube!)",
         budgetChart: "📊 Подробные графики обновляются еженедельно на сайте!",
         messageTitle: "🎤 Послание От Сердца",
-        message: "В эпоху, когда <strong>\"благотворительность\"</strong> стала чувствительным словом, <strong>\"отчёты\"</strong> стали трендом, а <strong>\"прозрачность\"</strong> роскошнее алмазов...<br><br>Я заявляю: <strong style=\"color: #e74c3c;\">НАКОРМИ МЕНЯ!</strong><br><br>Я беден, мне нужны деньги, но у меня ЕСТЬ СОВЕСТЬ! Каждый рубль, который вы отправите, я потрачу честно, прозрачно как мой голод! 😭<br><br><em>P/S: Обещаю не покупать машины на пожертвования. Потому что... у меня нет прав! 🚗❌</em>",
+        message: "В эпоху, когда <strong>\"благотворительность\"</strong> стала чувствительным словом, Я заявляю: <strong style=\"color: #e74c3c;\">НАКОРМИ МЕНЯ!</strong><br><br>Я беден, мне нужны деньги, но я НЕ ПОТЕРЯЮ СОВЕСТЬ! Каждый рубль, который вы пришлёте, я потрачу прозрачно, как мой пустой желудок! 😭<br><br><em>P/S: Обещаю не покупать машину на деньги пожертвований. Потому что... у меня нет прав! 🚗❌</em>",
         disclaimer: "<strong>⚠️ ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ:</strong> Это <strong>ЮМОРИСТИЧЕСКИЙ</strong> сайт. Весь контент предназначен для развлечения, не предназначен для оскорбления или критики каких-либо лиц/организаций."
     }
 };
