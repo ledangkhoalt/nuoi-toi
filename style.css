@@ -354,12 +354,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    /* Tắt animation nặng trên mobile để tránh giật */
+    body::before {
+        animation: none;
+    }
+
     body {
         padding: 10px;
     }
 
     .container {
         border-radius: 15px;
+        animation: none; /* Tắt slide-in animation trên mobile */
     }
 
     .header {
@@ -396,6 +402,10 @@ h1 {
 
     .feature-card {
         padding: 18px;
+        /* Hiển thị ngay lập tức trên mobile, không fade in */
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 
     .feature-icon {
@@ -421,6 +431,11 @@ h1 {
         width: 100%;
     }
 
+    .cta-button::before {
+        /* Tắt animation hover effect trên mobile */
+        display: none;
+    }
+
     .funny-notes {
         padding: 15px;
     }
@@ -431,6 +446,11 @@ h1 {
 
     .funny-notes li {
         font-size: 0.95em;
+    }
+
+    /* Tắt animation pulse trên mobile */
+    .pulse {
+        animation: none !important;
     }
 }
 
