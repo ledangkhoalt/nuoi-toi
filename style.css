@@ -2,6 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Tắt highlight trên mobile */
+}
+
+/* Tối ưu rendering cho mobile */
+@media (max-width: 768px) {
+    * {
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -moz-perspective: 1000;
+        -ms-perspective: 1000;
+        perspective: 1000;
+    }
 }
 
 body {
@@ -15,6 +35,8 @@ body {
     padding: 20px;
     position: relative;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body::before {
@@ -354,36 +376,55 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    /* Tắt animation nặng trên mobile để tránh giật */
+    /* Tắt TẤT CẢ animation và hiệu ứng nặng trên mobile */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
     body::before {
-        animation: none;
+        display: none; /* Ẩn hoàn toàn background animation */
     }
 
     body {
         padding: 10px;
+        background-attachment: scroll; /* Thay fixed bằng scroll để mượt hơn */
     }
 
     .container {
         border-radius: 15px;
-        animation: none; /* Tắt slide-in animation trên mobile */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Giảm shadow phức tạp */
+        backdrop-filter: none; /* Tắt backdrop-filter rất nặng */
     }
 
     .header {
         padding: 30px 20px;
     }
 
+    .header::before {
+        display: none; /* Tắt header glow animation */
+    }
+
     .logo {
         width: 120px;
         height: 120px;
+        filter: none; /* Bỏ drop-shadow nặng */
+    }
+
+    .logo img {
+        filter: none; /* Bỏ drop-shadow nặng */
     }
 
     h1 {
         font-size: 2em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Giảm shadow phức tạp */
     }
     
     .slogan {
         font-size: 1em;
         padding: 12px;
+        backdrop-filter: none; /* Tắt backdrop-filter */
+        background: rgba(255,255,255,0.9); /* Dùng màu đặc thay vì blur */
     }
 
     .content {
@@ -402,10 +443,17 @@ h1 {
 
     .feature-card {
         padding: 18px;
-        /* Hiển thị ngay lập tức trên mobile, không fade in */
         opacity: 1 !important;
         transform: none !important;
-        transition: none !important;
+    }
+
+    .feature-card::before {
+        display: none; /* Tắt pseudo element */
+    }
+
+    .feature-card:hover {
+        transform: none !important;
+        box-shadow: none;
     }
 
     .feature-icon {
@@ -425,6 +473,10 @@ h1 {
         padding: 15px;
     }
 
+    .qr-code::before {
+        display: none; /* Tắt QR animation */
+    }
+
     .cta-button {
         padding: 12px 30px;
         font-size: 1em;
@@ -432,8 +484,11 @@ h1 {
     }
 
     .cta-button::before {
-        /* Tắt animation hover effect trên mobile */
         display: none;
+    }
+
+    .cta-button:hover {
+        transform: none !important;
     }
 
     .funny-notes {
@@ -448,9 +503,15 @@ h1 {
         font-size: 0.95em;
     }
 
-    /* Tắt animation pulse trên mobile */
-    .pulse {
-        animation: none !important;
+    /* Tối ưu Language Selector */
+    .language-selector {
+        backdrop-filter: none;
+        background: rgba(102, 126, 234, 0.95);
+    }
+
+    .lang-dropdown {
+        backdrop-filter: none;
+        background: white;
     }
 }
 
