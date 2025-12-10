@@ -37,22 +37,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <button class="lang-toggle" onclick="toggleLanguageMenu()" aria-label="Change Language">
-            🌐
-        </button>
-        <div class="lang-dropdown" id="langDropdown">
-            <button class="lang-btn active" data-lang="vi" onclick="setLanguage('vi')">🇻🇳 Tiếng Việt</button>
-            <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇬🇧 English</button>
-            <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
-            <button class="lang-btn" data-lang="da" onclick="setLanguage('da')">🇩🇰 Dansk</button>
-            <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">🇯🇵 日本語</button>
-            <button class="lang-btn" data-lang="zh" onclick="setLanguage('zh')">🇨🇳 中文</button>
-            <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')">🇷🇺 Русский</button>
-        </div>
-    </div>
-
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -67,104 +51,100 @@
 
         <div class="content">
             <div class="section">
-                <h2 data-i18n="whyFeedMe">🎯 Tại Sao Nên Nuôi Tôi?</h2>
+                <h2>🎯 Tại Sao Nên Nuôi Tôi?</h2>
                 <div class="features">
                     <div class="feature-card">
                         <div class="feature-icon">📊</div>
-                        <h3 data-i18n="featureRealtime">Sao Kê Realtime</h3>
-                        <p data-i18n="featureRealtimeDesc">Cập nhật từng giây! Còn nhanh hơn cả tốc độ bạn chuyển tiền!</p>
+                        <h3>Sao Kê Realtime</h3>
+                        <p>Cập nhật từng giây! Còn nhanh hơn cả tốc độ bạn chuyển tiền!</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🔍</div>
-                        <h3 data-i18n="featureTransparent">Minh Bạch 300%</h3>
-                        <p data-i18n="featureTransparentDesc">Hơn cả 100%! Tôi còn báo cáo cả việc mua ly trà sữa!</p>
+                        <h3>Minh Bạch 300%</h3>
+                        <p>Hơn cả 100%! Tôi còn báo cáo cả việc mua ly trà sữa!</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">💸</div>
-                        <h3 data-i18n="featureReasonable">Chi Tiêu Hợp Lý</h3>
-                        <p data-i18n="featureReasonableDesc">Không mua xe hơi, nhà cửa. Chỉ ăn cơm với mì tôm thôi!</p>
+                        <h3>Chi Tiêu Hợp Lý</h3>
+                        <p>Không mua xe hơi, nhà cửa. Chỉ ăn cơm với mì tôm thôi!</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📱</div>
-                        <h3 data-i18n="featureTracking">App Tracking</h3>
-                        <p data-i18n="featureTrackingDesc">Theo dõi 24/7 tôi ăn gì, uống gì, đi đâu. Như "Big Brother" vậy!</p>
+                        <h3>App Tracking</h3>
+                        <p>Theo dõi 24/7 tôi ăn gì, uống gì, đi đâu. Như "Big Brother" vậy!</p>
                     </div>
                 </div>
             </div>
 
             <div class="funny-notes">
-                <h3 data-i18n="commitmentTitle">🎪 Cam Kết Vàng Của Tôi:</h3>
+                <h3>🎪 Cam Kết Vàng Của Tôi:</h3>
                 <ul>
-                    <li data-i18n="commitment1"><strong>Sao kê mỗi ngày:</strong> Cập nhật lúc 6h sáng, đều như vắt tranh! (Kể cả Chủ Nhật & Lễ)</li>
-                    <li data-i18n="commitment2"><strong>Không giấu giếm:</strong> Từ tô phở 50k đến hộp sữa chua 8k đều được ghi chép tỉ mỉ!</li>
-                    <li data-i18n="commitment3"><strong>Có hóa đơn chứng từ:</strong> Chụp hình bill, quét mã vạch, lưu biên lai đầy đủ!</li>
-                    <li data-i18n="commitment4"><strong>Video unboxing:</strong> Mở từng gói mì tôm live trên Facebook cho anh chị xem!</li>
-                    <li data-i18n="commitment5"><strong>Hotline 24/7:</strong> Gọi hỏi tôi ăn gì bất cứ lúc nào, kể cả 3h sáng!</li>
-                    <li data-i18n="commitment6"><strong>Không block:</strong> Hỏi khó đến mấy cũng trả lời, không "đã xem" rồi im lặng!</li>
+                    <li><strong>Sao kê mỗi ngày:</strong> Cập nhật lúc 6h sáng, đều như vắt tranh! (Kể cả Chủ Nhật & Lễ)</li>
+                    <li><strong>Không giấu giếm:</strong> Từ tô phở 50k đến hộp sữa chua 8k đều được ghi chép tỉ mỉ!</li>
+                    <li><strong>Có hóa đơn chứng từ:</strong> Chụp hình bill, quét mã vạch, lưu biên lai đầy đủ!</li>
+                    <li><strong>Video unboxing:</strong> Mở từng gói mì tôm live trên Facebook cho anh chị xem!</li>
+                    <li><strong>Hotline 24/7:</strong> Gọi hỏi tôi ăn gì bất cứ lúc nào, kể cả 3h sáng!</li>
+                    <li><strong>Khôngblock:</strong> Hỏi khó đến mấy cũng trả lời, không "đã xem" rồi im lặng!</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2 data-i18n="compareTitle">💰 So Sánh Với "Người Khác"</h2>
+                <h2>💰 So Sánh Với "Người Khác"</h2>
                 <div class="funny-notes" style="background: #ffe6e6; border-left-color: #ff4757;">
-                    <h3 style="color: #ff4757;" data-i18n="othersTitle">❌ Người Khác:</h3>
+                    <h3 style="color: #ff4757;">❌ Người Khác:</h3>
                     <ul>
-                        <li style="color: #e74c3c;" data-i18n="others1">Sao kê sau 3 năm (hoặc không bao giờ)</li>
-                        <li style="color: #e74c3c;" data-i18n="others2">File Excel blur mờ như ảnh ma</li>
-                        <li style="color: #e74c3c;" data-i18n="others3">Số liệu "làm tròn" theo kiểu 1 + 1 = 3</li>
-                        <li style="color: #e74c3c;" data-i18n="others4">Block người hỏi nhanh như chớp</li>
+                        <li style="color: #e74c3c;">Sao kê sau 3 năm (hoặc không bao giờ)</li>
+                        <li style="color: #e74c3c;">File Excel blur mờ như ảnh ma</li>
+                        <li style="color: #e74c3c;">Số liệu "làm tròn" theo kiểu 1 + 1 = 3</li>
+                        <li style="color: #e74c3c;">Block người hỏi nhanh như chớp</li>
                     </ul>
                 </div>
                 <div class="funny-notes" style="background: #e6ffe6; border-left-color: #4CAF50; margin-top: 15px;">
-                    <h3 style="color: #4CAF50;" data-i18n="meTitle">✅ Nuôi Tôi:</h3>
+                    <h3 style="color: #4CAF50;">✅ Nuôi Tôi:</h3>
                     <ul>
-                        <li style="color: #27ae60;" data-i18n="me1">Sao kê trước khi tiêu (để anh chị duyệt)</li>
-                        <li style="color: #27ae60;" data-i18n="me2">File Excel 4K Ultra HD, có chữ ký điện tử</li>
-                        <li style="color: #27ae60;" data-i18n="me3">Số liệu chính xác đến từng đồng</li>
-                        <li style="color: #27ae60;" data-i18n="me4">Trả lời inbox nhanh hơn cả chatbot</li>
+                        <li style="color: #27ae60;">Sao kê trước khi tiêu (để anh chị duyệt)</li>
+                        <li style="color: #27ae60;">File Excel 4K Ultra HD, có chữ ký điện tử</li>
+                        <li style="color: #27ae60;">Số liệu chính xác đến từng đồng</li>
+                        <li style="color: #27ae60;">Trả lời inbox nhanh hơn cả chatbot</li>
                     </ul>
                 </div>
             </div>
 
             <div class="qr-section">
-                <h2 style="color: #c0392b; margin-bottom: 10px;" data-i18n="donateTitle">💳 DONATE NGAY ĐI, NẾ U BẠN ĐANG CƯỜI!</h2>
-                <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;" data-i18n="donateDesc">
-                    Quét mã QR này để nuôi tôi (và nhận bản sao kê ngay lập tức!) hoặc vào link này <a href="https://buymeacoffee.com/nuoitoi.com" target="_blank">https://buymeacoffee.com/nuoitoi.com</a>
+                <h2 style="color: #c0392b; margin-bottom: 10px;">💳 DONATE NGAY ĐI, NẾU BẠN ĐANG CƯỜI!</h2>
+                <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;">
+                    Quét mã QR này để nuôi tôi (và nhận bản sao kê ngay lập tức!)
                 </p>
                 <div class="qr-code">
                     <a href="https://buymeacoffee.com/nuoitoi.com" target="_blank"><img src="./images/qr-code.png" alt="QR Code Donation"></a>
                 </div>
-                <p style="font-size: 1.1em; color: #e74c3c; font-weight: bold;" class="pulse" data-i18n="donateAuto">
+                <p style="font-size: 1.1em; color: #e74c3c; font-weight: bold;" class="pulse">
                     ⚡ Chuyển xong là có mail tự động! ⚡
                 </p>
-                <button class="cta-button" data-i18n="donateButton">
+                <button class="cta-button" onclick="alert('Cảm ơn bạn đã quan tâm! Hãy quét mã QR để donate nhé! 🙏')">
                     🎁 TÔI MUỐN NUÔI BẠN!
                 </button>
             </div>
 
             <div class="section">
-                <h2 data-i18n="budgetTitle">📈 Tôi Sẽ Dùng Tiền Vào Đâu?</h2>
+                <h2>📈 Tôi Sẽ Dùng Tiền Vào Đâu?</h2>
                 <div class="funny-notes" style="background: #f0f8ff; border-left-color: #3498db;">
                     <ul>
-                        <li data-i18n="budget1"><strong>40%</strong> - Ăn uống (Cơm, mì tôm, trứng, rau. KHÔNG có tôm hùm!)</li>
-                        <li data-i18n="budget2"><strong>20%</strong> - Điện nước internet (Để sao kê cho anh chị)</li>
-                        <li data-i18n="budget3"><strong>15%</strong> - Thuê nhà (Phòng trọ 15m², không phải penthouse)</li>
-                        <li data-i18n="budget4"><strong>10%</strong> - Y tế (Thuốc cảm, vitamin C, khẩu trang)</li>
-                        <li data-i18n="budget5"><strong>10%</strong> - Học tập nâng cao (Sách, khóa học online để sao kê tốt hơn)</li>
-                        <li data-i18n="budget6"><strong>5%</strong> - Giải trí (Netflix? Không! Chỉ Youtube miễn phí thôi!)</li>
+                        <li><strong>40%</strong> - Ăn uống (Cơm, mì tôm, trứng, rau. KHÔNG có tôm hùm!)</li>
+                        <li><strong>20%</strong> - Điện nước internet (Để sao kê cho anh chị)</li>
+                        <li><strong>15%</strong> - Thuê nhà (Phòng trọ 15m², không phải penthouse)</li>
+                        <li><strong>10%</strong> - Y tế (Thuốc cảm, vitamin C, khẩu trang)</li>
+                        <li><strong>10%</strong> - Học tập nâng cao (Sách, khóa học online để sao kê tốt hơn)</li>
+                        <li><strong>5%</strong> - Giải trí (Netflix? Không! Chỉ Youtube miễn phí thôi!)</li>
                     </ul>
                 </div>
-                <p style="text-align: center; margin-top: 20px; font-weight: bold; color: #e74c3c; font-size: 1.1em;" data-i18n="budgetChart">
-                    📈 Biểu đồ chi tiết cập nhật hàng tuần trên website!
+                <p style="text-align: center; margin-top: 20px; font-weight: bold; color: #e74c3c; font-size: 1.1em;">
+                    📊 Biểu đồ chi tiết cập nhật hàng tuần trên website!
                 </p>
             </div>
 
             <div class="section">
-                <h2 data-i18n="videoTitle">🎬 "Tôi Nuôi Cô!" - Châu Tinh Trì</h2>
                 <div class="funny-notes" style="background: #fff0f5; border-left-color: #ff69b4; text-align: center;">
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 20px;" data-i18n="videoDesc">
-                        Đây chính là nguồn cảm hứng cho website này! 😂
-                    </p>
                     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 10px;">
                         <iframe 
                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
@@ -179,9 +159,9 @@
             </div>
 
             <div class="section">
-                <h2 data-i18n="messageTitle">🎤 Lời Nhắn Từ Trái Tim</h2>
+                <h2>🎤 Lời Nhắn Từ Trái Tim</h2>
                 <div class="funny-notes" style="background: #fff0f5; border-left-color: #ff69b4;">
-                    <p style="font-size: 1.1em; line-height: 1.8; color: #555;" data-i18n="message">
+                    <p style="font-size: 1.1em; line-height: 1.8; color: #555;">
                         Trong thời đại mà <strong>"từ thiện"</strong> đã trở thành từ nhạy cảm, 
                         Tôi xin khẳng định: <strong style="color: #e74c3c;">HÃY NUÔI TÔI!</strong>
                         <br><br>
@@ -196,7 +176,7 @@
             </div>
 
             <div class="disclaimer">
-                <p data-i18n="disclaimer">
+                <p>
                     <strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC</strong> 
                     Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào.
 
@@ -226,8 +206,5 @@
             card.style.transition = 'all 0.6s ease';
         });
     </script>
-    
-    <!-- Translation Script -->
-    <script src="./translations.js"></script>
 </body>
 </html>
