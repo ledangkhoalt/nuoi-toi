@@ -158,9 +158,164 @@
                     📈 Biểu đồ chi tiết cập nhật hàng tuần trên website!
     
                 </p>
-                                <p style="text-align: center; margin-top: 20px;">
-                    <a href="https://docs.google.com/spreadsheets/d/1iTaFoNHLt_OpEW_yf3sjXea-qDznZ0UjZQzUtQXS-zY/edit?usp=sharing" target="_blank">Sao kê ngày 11/12/2025</a>
-                </p>
+                
+                <!-- Running Button Game -->
+                <div style="position: relative; margin-top: 40px; min-height: 200px; padding: 20px; background: #f8f9fa; border-radius: 15px; overflow: hidden;">
+                    <div id="button-container" style="position: relative; width: 100%; height: 150px;">
+                        <a id="running-button" 
+                           href="https://docs.google.com/spreadsheets/d/1iTaFoNHLt_OpEW_yf3sjXea-qDznZ0UjZQzUtQXS-zY/edit?usp=sharing" 
+                           target="_blank"
+                           data-i18n="statementButton"
+                           style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 1.1em; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer; white-space: nowrap; min-width: 180px; text-align: center;">
+                            📊 Sao kê
+                        </a>
+                    </div>
+                </div>
+                
+                <style>
+                    #running-button.running {
+                        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+                    }
+                    
+                    #running-button.caught {
+                        background: linear-gradient(135deg, #52c234 0%, #2ecc71 100%);
+                        cursor: pointer !important;
+                        animation: tada 1s;
+                    }
+                    
+                    @keyframes tada {
+                        0% { transform: translate(-50%, -50%) scale(1); }
+                        10%, 20% { transform: translate(-50%, -50%) scale(0.9) rotate(-3deg); }
+                        30%, 50%, 70%, 90% { transform: translate(-50%, -50%) scale(1.1) rotate(3deg); }
+                        40%, 60%, 80% { transform: translate(-50%, -50%) scale(1.1) rotate(-3deg); }
+                        100% { transform: translate(-50%, -50%) scale(1) rotate(0); }
+                    }
+                    
+                    @media (max-width: 768px) {
+                        #running-button {
+                            position: relative !important;
+                            left: 0 !important;
+                            top: 0 !important;
+                            transform: none !important;
+                            display: block !important;
+                            margin: 0 auto !important;
+                            width: fit-content !important;
+                        }
+                        
+                        #button-container {
+                            height: auto !important;
+                            text-align: center !important;
+                        }
+                    }
+                </style>
+                
+                <script>
+                    (function() {
+                        const button = document.getElementById('running-button');
+                        const container = document.getElementById('button-container');
+                        const isMobile = window.innerWidth <= 768;
+                        
+                        let isRunning = true;
+                        let timeLeft = 60;
+                        let isMoving = false;
+                        
+                        // Chỉ chạy trên desktop
+                        if (!isMobile) {
+                            // Countdown timer (silent)
+                            const countdown = setInterval(() => {
+                                timeLeft--;
+                                
+                                if (timeLeft <= 0) {
+                                    clearInterval(countdown);
+                                    isRunning = false;
+                                    button.classList.remove('running');
+                                    button.classList.add('caught');
+                                    button.style.cursor = 'pointer';
+                                    const currentLang = localStorage.getItem('language') || 'vi';
+                                    const caughtText = translations[currentLang]?.statementCaught || '✅ Đã bắt được! Click để xem!';
+                                    button.textContent = caughtText;
+                                }
+                            }, 1000);
+                            
+                            // Track mouse position continuously
+                            let mouseX = 0, mouseY = 0;
+                            container.addEventListener('mousemove', function(e) {
+                                const rect = container.getBoundingClientRect();
+                                mouseX = e.clientX - rect.left;
+                                mouseY = e.clientY - rect.top;
+                            });
+                            
+                            // Mouse move handler
+                            button.addEventListener('mouseenter', function(e) {
+                                if (!isRunning || isMoving) return;
+                                
+                                isMoving = true;
+                                button.classList.add('running');
+                                
+                                const containerRect = container.getBoundingClientRect();
+                                const buttonRect = button.getBoundingClientRect();
+                                
+                                // Calculate safe boundaries
+                                const maxX = containerRect.width - buttonRect.width;
+                                const maxY = containerRect.height - buttonRect.height;
+                                
+                                // Random position FAR away from mouse
+                                let newX, newY;
+                                let attempts = 0;
+                                const minDistance = 250; // Khoảng cách tối thiểu từ chuột
+                                
+                                do {
+                                    newX = Math.random() * maxX;
+                                    newY = Math.random() * maxY;
+                                    
+                                    // Tính khoảng cách từ vị trí mới đến vị trí chuột hiện tại
+                                    const distanceToMouse = Math.sqrt(
+                                        Math.pow(newX + buttonRect.width/2 - mouseX, 2) + 
+                                        Math.pow(newY + buttonRect.height/2 - mouseY, 2)
+                                    );
+                                    
+                                    attempts++;
+                                    
+                                    // Chỉ chấp nhận nếu đủ xa chuột
+                                    if (distanceToMouse >= minDistance) break;
+                                    
+                                } while (attempts < 30);
+                                
+                                // Nếu không tìm được vị trí đủ xa, đẩy về góc đối diện
+                                if (attempts >= 30) {
+                                    newX = mouseX > containerRect.width / 2 ? 0 : maxX;
+                                    newY = mouseY > containerRect.height / 2 ? 0 : maxY;
+                                }
+                                
+                                button.style.left = newX + 'px';
+                                button.style.top = newY + 'px';
+                                button.style.transform = 'none';
+                                
+                                setTimeout(() => {
+                                    isMoving = false;
+                                }, 300);
+                            });
+                            
+                            // Prevent click and opening link when running
+                            button.addEventListener('click', function(e) {
+                                if (isRunning) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    button.classList.add('running');
+                                    return false;
+                                }
+                            });
+                            
+                            // Also prevent default on mousedown
+                            button.addEventListener('mousedown', function(e) {
+                                if (isRunning) {
+                                    e.preventDefault();
+                                    return false;
+                                }
+                            });
+                        }
+                    })();
+                </script>
             </div>
 
             <div class="section">
