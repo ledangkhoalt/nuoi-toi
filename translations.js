@@ -54,6 +54,12 @@ const translations = {
         from: "Từ",
         donations: "lượt donate",
         monthlyGoal: "Mục tiêu tháng này:",
+        expenseTitle: "Chi Tiêu",
+        expense1Title: "Món ăn cho tâm hồn",
+        expenseViewDetails: "Xem Chi Tiết",
+        incomeLabel: "Thu:",
+        spentLabel: "Chi:",
+        remainingLabel: "Còn lại:",
         messageTitle: "🎤 Lời Nhắn Từ Trái Tim",
         message: "Trong thời đại mà <strong>\"từ thiện\"</strong> đã trở thành từ nhạy cảm, Tôi xin khẳng định: <strong style=\"color: #e74c3c;\">HÃY NUÔI TÔI!</strong><br><br>Tôi nghèo, tôi cần tiền, nhưng tôi KHÔNG MẤT LƯƠNG TÂM! Mỗi đồng tiền các bạn gửi, tôi sẽ chi tiêu rõ ràng, minh bạch như bụng đói của tôi vậy! 😭<br><br><em>P/S: Tôi hứa sẽ không mua xe hơi bằng tiền donate. Vì... tôi chưa có bằng lái! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC</strong> Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào."
@@ -113,6 +119,12 @@ const translations = {
         from: "From",
         donations: "donations",
         monthlyGoal: "Monthly goal:",
+        expenseTitle: "Expenses",
+        expense1Title: "Food for the soul",
+        expenseViewDetails: "View Details",
+        incomeLabel: "Income:",
+        spentLabel: "Spent:",
+        remainingLabel: "Remaining:",
         messageTitle: "🎤 Message From The Heart",
         message: "In an era where <strong>\"charity\"</strong> has become a sensitive word, I declare: <strong style=\"color: #e74c3c;\">FEED ME!</strong><br><br>I'm poor, I need money, but I WON'T LOSE MY CONSCIENCE! Every dollar you send, I'll spend clearly, transparent as my empty stomach! 😭<br><br><em>P/S: I promise not to buy a car with donation money. Because... I don't have a license! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> This is a <strong>HUMOROUS</strong> website. All content is for entertainment purposes, not intended to offend or criticize any individual/organization."
@@ -168,6 +180,16 @@ const translations = {
         statementButton: "📊 Relevé",
         statementCaught: "✅ Attrapé! Cliquez pour voir!",
         statementRunning: "🏃 Attrapez-moi pour voir le relevé!",
+        totalReceived: "Total Reçu",
+        from: "De",
+        donations: "dons",
+        monthlyGoal: "Objectif mensuel:",
+        expenseTitle: "Dépenses",
+        expense1Title: "Nourriture pour l'âme",
+        expenseViewDetails: "Voir les Détails",
+        incomeLabel: "Revenu:",
+        spentLabel: "Dépensé:",
+        remainingLabel: "Restant:",
         messageTitle: "🎤 Message du Cœur",
         message: "À une époque où <strong>\"charité\"</strong> est devenu un mot sensible, Je déclare: <strong style=\"color: #e74c3c;\">NOURRISSEZ-MOI!</strong><br><br>Je suis pauvre, j'ai besoin d'argent, mais je NE PERDRAI PAS MA CONSCIENCE! Chaque euro que vous envoyez, je le dépenserai clairement, transparent comme mon estomac vide! 😭<br><br><em>P/S: Je promets de ne pas acheter une voiture avec l'argent des dons. Parce que... je n'ai pas de permis! 🚗❌</em>",
         disclaimer: "<strong>⚠️ AVERTISSEMENT:</strong> Ceci est un site web <strong>HUMORISTIQUE</strong>. Tout le contenu est à des fins de divertissement, sans intention d'offenser ou de critiquer une personne/organisation."
@@ -223,6 +245,16 @@ const translations = {
         statementButton: "📊 Kontoudtog",
         statementCaught: "✅ Fanget! Klik for at se!",
         statementRunning: "🏃 Fang mig for at se kontoudtog!",
+        totalReceived: "Samlet Modtaget",
+        from: "Fra",
+        donations: "donationer",
+        monthlyGoal: "Månedligt mål:",
+        expenseTitle: "Udgifter",
+        expense1Title: "Mad til sjælen",
+        expenseViewDetails: "Se Detaljer",
+        incomeLabel: "Indtægt:",
+        spentLabel: "Brugt:",
+        remainingLabel: "Tilbage:",
         messageTitle: "🎤 Besked Fra Hjertet",
         message: "I en æra hvor <strong>\"velgørenhed\"</strong> er blevet et følsomt ord, Jeg erklærer: <strong style=\"color: #e74c3c;\">FODRE MIG!</strong><br><br>Jeg er fattig, jeg har brug for penge, men jeg MISTER IKKE MIN SAMVITTIGHED! Hver krone du sender, bruger jeg klart, gennemsigtig som min tomme mave! 😭<br><br><em>P/S: Jeg lover ikke at købe en bil for donationspenge. Fordi... jeg har ikke kørekort! 🚗❌</em>",
         disclaimer: "<strong>⚠️ ANSVARSFRASKRIVELSE:</strong> Dette er en <strong>HUMORISTISK</strong> hjemmeside. Alt indhold er til underholdningsformål, ikke beregnet til at fornærme eller kritisere nogen person/organisation."
@@ -277,7 +309,16 @@ const translations = {
         budgetChart: "📊 詳細なチャートは毎週ウェブサイトで更新！",
         statementButton: "📊 明細",
         statementCaught: "✅ 捕まえた！クリックして見て！",
-        statementRunning: "🏃 明細を見るために私を捕まえて！",
+        statementRunning: "🏃 明細を見るために私を捕まえて！",        totalReceived: "総受取額",
+        from: "から",
+        donations: "寄付",
+        monthlyGoal: "今月の目標:",
+        expenseTitle: "支出",
+        expense1Title: "魂のための食べ物",
+        expenseViewDetails: "詳細を見る",
+        incomeLabel: "収入:",
+        spentLabel: "支出:",
+        remainingLabel: "残り:",
         messageTitle: "🎤 心からのメッセージ",
         message: "<strong>「慈善」</strong>が敏感な言葉になった時代に、私は宣言します：<strong style=\"color: #e74c3c;\">私を養って！</strong><br><br>私は貧しく、お金が必要ですが、良心を失いません！あなたが送ってくれたお金は、空腹のお腹のように透明に使います！😭<br><br><em>P/S：寄付金で車を買わないことを約束します。なぜなら...免許がないから！🚗❌</em>",
         disclaimer: "<strong>⚠️ 免責事項：</strong>これは<strong>ユーモラスな</strong>ウェブサイトです。すべてのコンテンツは娯楽目的であり、個人や組織を侮辱または批判する意図はありません。"
@@ -332,7 +373,16 @@ const translations = {
         budgetChart: "📊 详细图表每周在网站上更新！",
         statementButton: "📊 账单",
         statementCaught: "✅ 抓到了！点击查看！",
-        statementRunning: "🏃 抓住我看账单！",
+        statementRunning: "🏃 抓住我看账单！",        totalReceived: "总收入",
+        from: "来自",
+        donations: "次捐赠",
+        monthlyGoal: "本月目标：",
+        expenseTitle: "支出",
+        expense1Title: "灵魂的食物",
+        expenseViewDetails: "查看详情",
+        incomeLabel: "收入:",
+        spentLabel: "支出:",
+        remainingLabel: "剩余:",
         messageTitle: "🎤 发自内心的话",
         message: "在<strong>「慈善」</strong>成为敏感词的时代，我宣布：<strong style=\"color: #e74c3c;\">请养我！</strong><br><br>我很穷，我需要钱，但我不会失去良心！你们捐的每一分钱，我都会清楚地花掉，像我空空的肚子一样透明！😭<br><br><em>附言：我保证不会用捐款买车。因为...我没有驾照！🚗❌</em>",
         disclaimer: "<strong>⚠️ 免责声明：</strong>这是一个<strong>幽默</strong>网站。所有内容仅供娱乐，无意冒犯或批评任何个人/组织。"
@@ -384,9 +434,21 @@ const translations = {
         budget4: "<strong>10%</strong> - Здравоохранение (Лекарства от простуды, витамин C, маски)",
         budget5: "<strong>10%</strong> - Образование (Книги, онлайн-курсы для лучших отчётов)",
         budget6: "<strong>5%</strong> - Развлечения (Netflix? Нет! Только бесплатный YouTube!)",
-        budgetChart: "📊 Подробные графики обновляются еженедельно на сайте!",        statementButton: "📊 Отчёт",
+        budgetChart: "📊 Подробные графики обновляются еженедельно на сайте!",
+        statementButton: "📊 Отчёт",
         statementCaught: "✅ Поймал! Нажмите, чтобы посмотреть!",
-        statementRunning: "🏃 Поймай меня, чтобы увидеть отчёт!",        messageTitle: "🎤 Послание От Сердца",
+        statementRunning: "🏃 Поймай меня, чтобы увидеть отчёт!",
+        totalReceived: "Всего Получено",
+        from: "От",
+        donations: "пожертвований",
+        monthlyGoal: "Месячная цель:",
+        expenseTitle: "Расходы",
+        expense1Title: "Еда для души",
+        expenseViewDetails: "Подробнее",
+        incomeLabel: "Доход:",
+        spentLabel: "Расход:",
+        remainingLabel: "Остаток:",
+        messageTitle: "🎤 Послание От Сердца",
         message: "В эпоху, когда <strong>\"благотворительность\"</strong> стала чувствительным словом, Я заявляю: <strong style=\"color: #e74c3c;\">НАКОРМИ МЕНЯ!</strong><br><br>Я беден, мне нужны деньги, но я НЕ ПОТЕРЯЮ СОВЕСТЬ! Каждый рубль, который вы пришлёте, я потрачу прозрачно, как мой пустой желудок! 😭<br><br><em>P/S: Обещаю не покупать машину на деньги пожертвований. Потому что... у меня нет прав! 🚗❌</em>",
         disclaimer: "<strong>⚠️ ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ:</strong> Это <strong>ЮМОРИСТИЧЕСКИЙ</strong> сайт. Весь контент предназначен для развлечения, не предназначен для оскорбления или критики каких-либо лиц/организаций."
     }
@@ -441,10 +503,7 @@ function setLanguage(lang) {
     
     // Update donation counter với currency conversion
     if (typeof window.updateDonationUIWithLanguage === 'function') {
-        console.log('🔄 Calling updateDonationUIWithLanguage from setLanguage with lang:', lang);
         window.updateDonationUIWithLanguage(lang);
-    } else {
-        console.warn('⚠️ window.updateDonationUIWithLanguage is not available');
     }
     
     // Update button onclick
@@ -467,6 +526,5 @@ function setLanguage(lang) {
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || localStorage.getItem('preferredLanguage') || 'vi';
-    console.log('🌐 Loading saved language:', savedLang);
     setLanguage(savedLang);
 });
