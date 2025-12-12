@@ -50,6 +50,10 @@ const translations = {
         statementButton: "📊 Sao kê",
         statementCaught: "✅ Đã bắt được! Click để xem!",
         statementRunning: "🏃 Đuổi kịp mới có sao kê!",
+        totalReceived: "Tổng Đã Nhận Được",
+        from: "Từ",
+        donations: "lượt donate",
+        monthlyGoal: "Mục tiêu tháng này:",
         messageTitle: "🎤 Lời Nhắn Từ Trái Tim",
         message: "Trong thời đại mà <strong>\"từ thiện\"</strong> đã trở thành từ nhạy cảm, Tôi xin khẳng định: <strong style=\"color: #e74c3c;\">HÃY NUÔI TÔI!</strong><br><br>Tôi nghèo, tôi cần tiền, nhưng tôi KHÔNG MẤT LƯƠNG TÂM! Mỗi đồng tiền các bạn gửi, tôi sẽ chi tiêu rõ ràng, minh bạch như bụng đói của tôi vậy! 😭<br><br><em>P/S: Tôi hứa sẽ không mua xe hơi bằng tiền donate. Vì... tôi chưa có bằng lái! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC</strong> Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào."
@@ -105,6 +109,10 @@ const translations = {
         statementButton: "📊 Statement",
         statementCaught: "✅ Caught it! Click to view!",
         statementRunning: "🏃 Catch me to see statement!",
+        totalReceived: "Total Received",
+        from: "From",
+        donations: "donations",
+        monthlyGoal: "Monthly goal:",
         messageTitle: "🎤 Message From The Heart",
         message: "In an era where <strong>\"charity\"</strong> has become a sensitive word, I declare: <strong style=\"color: #e74c3c;\">FEED ME!</strong><br><br>I'm poor, I need money, but I WON'T LOSE MY CONSCIENCE! Every dollar you send, I'll spend clearly, transparent as my empty stomach! 😭<br><br><em>P/S: I promise not to buy a car with donation money. Because... I don't have a license! 🚗❌</em>",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> This is a <strong>HUMOROUS</strong> website. All content is for entertainment purposes, not intended to offend or criticize any individual/organization."
@@ -431,6 +439,14 @@ function setLanguage(lang) {
         }
     });
     
+    // Update donation counter với currency conversion
+    if (typeof window.updateDonationUIWithLanguage === 'function') {
+        console.log('🔄 Calling updateDonationUIWithLanguage from setLanguage with lang:', lang);
+        window.updateDonationUIWithLanguage(lang);
+    } else {
+        console.warn('⚠️ window.updateDonationUIWithLanguage is not available');
+    }
+    
     // Update button onclick
     document.querySelector('.cta-button').onclick = () => alert(t.donateAlert);
     
@@ -438,14 +454,19 @@ function setLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+    const langBtn = document.querySelector(`[data-lang="${lang}"]`);
+    if (langBtn) {
+        langBtn.classList.add('active');
+    }
     
-    // Save preference
-    localStorage.setItem('preferredLanguage', lang);
+    // Save preference - sử dụng cùng key 'language'
+    localStorage.setItem('language', lang);
+    localStorage.setItem('preferredLanguage', lang); // Keep for backwards compatibility
 }
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'vi';
+    const savedLang = localStorage.getItem('language') || localStorage.getItem('preferredLanguage') || 'vi';
+    console.log('🌐 Loading saved language:', savedLang);
     setLanguage(savedLang);
 });
